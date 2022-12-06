@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const HomePage = () => {
     const [productList, setProductList] = useState([]);
 
-  
     useEffect(() => {
       const interval = setInterval(() => {
         fetch("http://localhost:8080/api/product")
@@ -17,12 +15,6 @@ const HomePage = () => {
   
     return (
       <div>
-        <Link to={"/addproduct"}> 
-          <p>Add Product</p>
-        </Link >
-        <Link to={"/cart"}>
-          <p>Cart</p>
-        </Link>
         {productList.map((product, index) => (
             <div key={index}>
               <p>ProductID: {product.productID}</p>
