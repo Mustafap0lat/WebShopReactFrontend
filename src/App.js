@@ -6,7 +6,6 @@ import ProductListPage from "./pages/ProductListPage";
 import ShoppingBagPage from "./pages/ShoppingBagPage";
 import AddProduct from "./administrator/AddProduct"
 import NavigationHeader from "./components/header/NavigationHeader";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (

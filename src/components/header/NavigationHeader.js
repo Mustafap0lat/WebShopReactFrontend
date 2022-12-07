@@ -1,38 +1,51 @@
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from 'react-bootstrap/Nav';
-import logo from '../../assets/images/logo.png';
+import logo from "../../assets/images/logo.png";
+import "./NavigationHeader.css";
 import { Link } from "react-router-dom";
+import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { BsSearch } from "react-icons/bs";
 
 const NavigationHeader = () => {
+  const searchIcon = <BsSearch />;
+  const shoppingCartIcon = <FaShoppingCart />;
+  const userIcon = <FaUser />;
+
   return (
-    <div>    
-        <Navbar bg="dark" expand="lg">
-          <Container fluid>
-            <Navbar.Brand href="/"><img alt="Specula-Logo" width="100" height="60" src={logo}/></Navbar.Brand>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Container>
-        </Navbar>
-        <Navbar bg="dark" variant="dark">
-          <Container>
-            <Nav>
-              <Link to="/">Home</Link>
-              <Link to="/productlistpage">Products</Link>
-              <Link to="/aboutus">About us</Link>
-              <Link to="/contact">Contact</Link>
-            </Nav>
-          </Container>
-        </Navbar>
+    <div className="navigationheader">
+      <div className="navigationheadertop">
+        <div className="navigationlogoandsearch">
+          <div className="imagecontainer">
+            <img alt="Specula-Logo" width="100" height="60" src={logo} />
+          </div>   
+          <form>
+            <div className="searchcontainer">
+            <i className="searchicon">{searchIcon}</i>
+              <input
+                className="searchinput"
+                placeholder="Search Product . . ."
+              ></input>
+            </div>
+          </form>
+          <div className="icon">{shoppingCartIcon}</div>
+          <div className="icon">{userIcon}</div>
+        </div>
+  
+      </div>
+      <div className="navigationheaderbottom">
+        <div className="navigationitems">
+          <Link className="navigationitem" to="/">
+            Home
+          </Link>
+          <Link className="navigationitem" to="/productlistpage">
+            Products
+          </Link>
+          <Link className="navigationitem" to="/aboutus">
+            About us
+          </Link>
+          <Link className="navigationitem" to="/contact">
+            Contact
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
