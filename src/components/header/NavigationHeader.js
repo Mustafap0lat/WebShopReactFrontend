@@ -10,28 +10,29 @@ const NavigationHeader = () => {
   const userIcon = <FaUser />;
 
   return (
-    <div className="navigationheader">
-      <div className="navigationheadertop">
-        <div className="navigationlogoandsearch">
-          <div className="imagecontainer">
-            <img alt="Specula-Logo" width="100" height="60" src={logo} />
-          </div>   
-          <form>
-            <div className="searchcontainer">
-            <i className="searchicon">{searchIcon}</i>
-              <input
-                className="searchinput"
-                placeholder="Search Product . . ."
-              ></input>
-            </div>
-          </form>
-          <div className="icon">{shoppingCartIcon}</div>
-          <div className="icon">{userIcon}</div>
-        </div>
-  
+    <div className="navigationcontainer"> 
+    <div className="navigationcontainertop">
+      <div className="logo">
+        <Link to="/">
+        <img alt="Specula-Logo" width="100" height="60" src={logo} />
+        </Link>
       </div>
-      <div className="navigationheaderbottom">
-        <div className="navigationitems">
+      <div className="searchbar">
+        <div className="searchicon">{searchIcon}</div>
+        <input
+          className="searchinput"
+          placeholder="Search Product . . ."
+        ></input>
+        <Link to="/shoppingbagpage">
+        <div className="icon">{shoppingCartIcon}</div>
+        </Link>
+        <Link>
+        <div className="icon">{userIcon}</div>
+        </Link>
+      </div>
+      </div> 
+      <div className="navigationcontainerbottom">
+      <div className="navigationitems">
           <Link className="navigationitem" to="/">
             Home
           </Link>
