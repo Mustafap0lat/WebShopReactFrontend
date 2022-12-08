@@ -10,7 +10,7 @@ const ProductListCard = ({ productName = "", price = ""}) => {
   return (
     <Row>
         <Col>
-          <Card key="" className="m-5">
+          <Card className="m-5">
             <Card.Img variant="top" src={productimage} />
             <Card.Body>
               <Card.Title>{productName}</Card.Title>

@@ -1,8 +1,7 @@
 .home-page-container {
     background-image: url("../assets/images/homepicture.png");
-    height: 83.4vh;
+    height: 100vh;
     background-repeat: no-repeat;
-    width: 100%;
     background-size: cover;
     background-size: center;
 }

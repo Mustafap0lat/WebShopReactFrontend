@@ -13,7 +13,7 @@ const NavHeader = () => {
   const userIcon = <FaUser />;
 
   return (
-    <Container fluid className="bg-black">
+    <Container fluid className="bg-black overflow-hidden">
       <Container
         fluid
         className="d-flex justify-content-between align-items-sm-center p-3 border-bottom"
