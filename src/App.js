@@ -5,12 +5,13 @@ import ProductPage from "./pages/ProductPage";
 import ProductListPage from "./pages/ProductListPage";
 import ShoppingBagPage from "./pages/ShoppingBagPage";
 import AddProduct from "./administrator/AddProduct"
-import NavigationHeader from "./components/header/NavigationHeader";
+import NavHeader from "./components/header/NavHeader";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
     <div className="App">
-      <NavigationHeader/>
+      <NavHeader/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/addproduct" element={<AddProduct/>}/>
