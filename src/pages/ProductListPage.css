@@ -1,11 +1,5 @@
-.product-list-section {
-    display: flex;
-}
-
 .product-list-grid {
-    display: flex;
-    max-width: 65%;
-    gap: 1rem;
-    margin: 3rem auto;
+    display: grid;
+    margin-top: 8rem;
+    grid-template-columns: auto auto auto;
 }
-

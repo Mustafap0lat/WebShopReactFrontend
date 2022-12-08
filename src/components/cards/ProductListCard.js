@@ -1,15 +1,25 @@
-import React from 'react'
+import React from "react";
 import "./ProductListCard.css";
 import productimage from "../../assets/images/productimage.jpg";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
-const ProductListCard = () => {
+const ProductListCard = ({ productName = "", price = ""}) => {
+
   return (
-    <div className="product-card">
-    <img className="product-image" alt="product" src={productimage} />
-    <h3 className="product-title">BIANACA MOON SQUARE</h3>
-    <p className="product-subtitle">980kr</p>
-    </div>
-  )
-}
+    <Row>
+        <Col>
+          <Card key="" className="m-5">
+            <Card.Img variant="top" src={productimage} />
+            <Card.Body>
+              <Card.Title>{productName}</Card.Title>
+              <Card.Text>{price}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+    </Row>
+  );
+};
 
 export default ProductListCard;
