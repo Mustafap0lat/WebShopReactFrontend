@@ -8,10 +8,11 @@ import AddProduct from "./administrator/AddProduct"
 import NavHeader from "./components/header/NavHeader";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import { CartProvider } from "./CartContext";
 
 const App = () => {
   return (
-    <div>
+    <CartProvider>
       <NavHeader/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="product/:productID" element={<ProductPage/>}/>
         <Route path="/shoppingbag" element={<ShoppingBagPage/>}/>
       </Routes>
-    </div>
+    </CartProvider>
   );
 }
 

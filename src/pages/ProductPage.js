@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./ProductPage.css";
 import Card from "react-bootstrap/Card";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
+import { CartContext } from "../CartContext";
 
 const ProductPage = () => {
   const [product, setProduct] = useState([]);
+  const { addItemToCart } = useContext(CartContext);
 
   const { productID } = useParams();
 
@@ -29,6 +31,9 @@ const ProductPage = () => {
           </Card.Body>
         </Card>
       </Row>
+      <Button onClick={() => addItemToCart(productID)}>
+        Add Item to Cart 
+      </Button>
     </Container>
   );
 };
