@@ -36,12 +36,12 @@ const NavHeader = () => {
             aria-label="Search"
           />
           <Link to="/shoppingbag">
-            <Container className="ms-5 text-white">
+            <Container className="ms-5 text-white fs-4">
               {shoppingCartIcon}
             </Container>
           </Link>
           <Link to="/user">
-            <Container className="ms-5 me-4 text-white ">{userIcon}</Container>
+            <Container className="ms-5 me-4 text-white fs-4">{userIcon}</Container>
           </Link>
         </Form>
       </Container>

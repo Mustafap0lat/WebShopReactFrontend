@@ -6,6 +6,8 @@ const AddProduct = () => {
     productTitle: "",
     description: "",
     price: "",
+    details: "",
+    size: ""
   });
 
   const handleChange = (e) => {
@@ -27,6 +29,8 @@ const AddProduct = () => {
       productTitle: "",
       description: "",
       price: "",
+      details: "",
+    size: ""
   });
   };
 
@@ -63,6 +67,22 @@ const AddProduct = () => {
           placeholder="Price"
           value={input.price}
           name="price"
+          onChange={handleChange}
+        />
+         <input
+          id="standard-details"
+          variant="standard"
+          placeholder="Details"
+          value={input.details}
+          name="details"
+          onChange={handleChange}
+        />
+         <input
+          id="standard-size"
+          variant="standard"
+          placeholder="Size"
+          value={input.size}
+          name="size"
           onChange={handleChange}
         />
       </form>
