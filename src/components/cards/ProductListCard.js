@@ -13,7 +13,7 @@ const ProductListCard = ({ productName = "", price = ""}) => {
           <Card className="m-5">
             <Card.Img variant="top" src={productimage} />
             <Card.Body>
-              <Card.Title>{productName}</Card.Title>
+              <Card.Title className="">{productName}</Card.Title>
               <Card.Text>{price}</Card.Text>
             </Card.Body>
           </Card>

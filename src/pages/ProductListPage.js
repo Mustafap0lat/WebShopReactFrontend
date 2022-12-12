@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./ProductListPage.css";
 import ProductListCard from "../components/cards/ProductListCard";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const ProductListPage = () => {
@@ -17,12 +18,14 @@ const ProductListPage = () => {
   return (
     <Container fluid>
       <Row>
-        {productList.map((product) => (
+        {productList.map((product, index) => (
           <Col md={3}>
+            <Link className="text-decoration-none text-black" key={index} to={`/product/${product.productID}`}>
           <ProductListCard
             productName={product.productName}
             price={product.price}
           />
+          </Link>
           </Col>
         ))}
       </Row>
