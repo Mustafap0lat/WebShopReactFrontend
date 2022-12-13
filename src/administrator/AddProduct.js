@@ -7,11 +7,19 @@ const AddProduct = () => {
     description: "",
     price: "",
     details: "",
-    size: ""
+    size: "",
+    photo: ""
   });
 
   const handleChange = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    console.log(input)
+  };
+
+  const handleImage = async (e) => {
+    const input = e.target.files[0];
+    const base64 = await convertToBase64(input);
+    setInput((prev) => ({ ...prev, [e.target.name]: e.target.value, photo: base64 }));
     console.log(input)
   };
 
@@ -30,8 +38,22 @@ const AddProduct = () => {
       description: "",
       price: "",
       details: "",
-    size: ""
+      size: "",
+      photo:""
   });
+  };
+
+  const convertToBase64   =  async (input) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(input);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
   };
 
   return (
@@ -84,6 +106,14 @@ const AddProduct = () => {
           value={input.size}
           name="size"
           onChange={handleChange}
+        />
+        <input
+          type="file"
+          variant="standard"
+          label="Photo"
+          name="photo"
+          accept=".jpeg, .png, .jpg"
+          onChange={handleImage}
         />
       </form>
       <button onClick={addProduct}>

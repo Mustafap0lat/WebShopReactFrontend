@@ -4,7 +4,6 @@ import ProductListCard from "../components/cards/ProductListCard";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
 const ProductListPage = () => {
   const [productList, setProductList] = useState([]);
 
@@ -22,6 +21,7 @@ const ProductListPage = () => {
           <Col md={3}>
             <Link className="text-decoration-none text-black" key={index} to={`/product/${product.productID}`}>
           <ProductListCard
+            photo={product.photo}
             productName={product.productName}
             price={product.price}
           />

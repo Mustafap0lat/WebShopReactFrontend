@@ -25,7 +25,7 @@ const ProductPage = () => {
 
   return (
     <Container>
-      <Row className="m-5 align-items-sm-center">
+      <Row className="m-5">
         <Col>
           <Card>
             <Card.Img variant="top" src={productimage} />
