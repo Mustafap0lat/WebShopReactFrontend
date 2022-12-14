@@ -3,6 +3,8 @@ import { CartContext } from "../CartContext";
 import { useEffect, useState, useContext } from "react";
 import ShoppingBagCard from "../components/cards/ShoppingBagCard";
 import { Button, Col, Container, Row, Stack, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const ShoppingBagPage = () => {
   const { items, getTotalPrice } = useContext(CartContext);
   let [total, setTotal] = useState("");
@@ -65,7 +67,7 @@ const ShoppingBagPage = () => {
             <Button
                 className="bg-black border 0 p-4 fs-5 fw-bold border 0 col-md-10 mt-5"
               >
-                CHECKOUT
+                <Link className="text-white text-decoration-none" to="/checkout">CHECKOUT</Link>
               </Button>
             </Stack>
           </Container>

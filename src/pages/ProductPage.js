@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 import Card from "react-bootstrap/Card";
 import { Button, Col, Container, Row, Stack, Accordion} from "react-bootstrap";
 import { CartContext } from "../CartContext";
-import productimage from "../assets/images/productimage.jpg";
 import { BsFillHeartFill, BsFillShareFill } from "react-icons/bs";
 import "./ProductPage.css";
 import { Link } from "react-router-dom";
@@ -28,7 +27,7 @@ const ProductPage = () => {
       <Row className="m-5">
         <Col>
           <Card>
-            <Card.Img variant="top" src={productimage} />
+            <Card.Img variant="top" src={product.photo} />
           </Card>
         </Col>
         <Col>

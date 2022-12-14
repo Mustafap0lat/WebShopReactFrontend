@@ -9,6 +9,7 @@ import NavHeader from "./components/header/NavHeader";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { CartProvider } from "./CartContext";
+import CheckOutPage from "./pages/CheckOutPage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/product" element={<ProductPage/>}/>
         <Route path="product/:productID" element={<ProductPage/>}/>
         <Route path="/shoppingbag" element={<ShoppingBagPage/>}/>
+        <Route path="/checkout" element={<CheckOutPage/>}/>
       </Routes>
     </CartProvider>
   );
