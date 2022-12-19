@@ -20,6 +20,7 @@ const ShoppingBagPage = () => {
           {items.map((product, index) => (
             <Stack key={index}>
               <ShoppingBagCard
+                productID={product.product.productID}
                 photo={product.product.photo}
                 productName={product.product.productName}
                 price={product.product.price}

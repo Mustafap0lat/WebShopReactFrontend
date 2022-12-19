@@ -2,15 +2,19 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Stack } from "react-bootstrap";
+import { Stack, Button } from "react-bootstrap";
 
 const ShoppingBagCard = ({
+  productID = "",
   productName = "",
   price = "",
   details = "",
   quantity = "",
   photo = "",
 }) => {
+
+
+
   return (
     <Row className="mb-5">
       <Col sm={3}>
@@ -18,8 +22,8 @@ const ShoppingBagCard = ({
       </Col>
       <Col sm={9} md={8}>
         <Stack direction="horizontal" className="justify-content-between mb-4">
-          <Card.Title className="fs-5">{productName}</Card.Title>
-          <Card.Text className="fs-6 fw-bold">QTY: {quantity} </Card.Text>
+          <Card.Title className="fs-5">{productName}{productID}</Card.Title>
+          <Card.Text className="fs-6 fw-bold">QTY: {quantity} </Card.Text>    
         </Stack>
         <Card.Text className="fs-6">#STYLE GREENWIZARD</Card.Text>
         <Stack direction="horizontal" className="justify-content-between mb-4">
