@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { CartProvider } from "./CartContext";
 import CheckOutPage from "./pages/CheckOutPage";
+import ContactPage from "./pages/ContactPage";
+import Aboutus from "./pages/Aboutus";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="product/:productID" element={<ProductPage/>}/>
         <Route path="/shoppingbag" element={<ShoppingBagPage/>}/>
         <Route path="/checkout" element={<CheckOutPage/>}/>
+        <Route path="/contact" element={<ContactPage/>}/>
+        <Route path="/about" element={<Aboutus/>}/>
       </Routes>
     </CartProvider>
   );

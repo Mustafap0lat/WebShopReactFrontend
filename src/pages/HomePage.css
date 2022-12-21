@@ -1,10 +1,13 @@
-.home-page-container {
-    background-image: url("../assets/images/homepicture.png");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: center;
-    
+.body-image {     
+    background-image: url("../assets/images/homepicture.png");     
+    position: fixed;     
+    top: 5;     
+    left: 0;     
+    width: 100%;     
+    height: 100%;     
+    z-index: -1;     
+    background-size: cover;     
+    background-position: center;   
 }
 
 .inner-home-page-container {

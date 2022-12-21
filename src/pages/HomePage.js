@@ -4,7 +4,7 @@ import "./HomePage.css";
 
 const HomePage = () => {
     return (
-      <Container fluid className="home-page-container">
+      <Container fluid className="body-image">
         <Row className="inner-home-page-container align-items-center">    
           <Col>
           <Container className="text-white fs-1 mb-4">Welcome to Specula</Container>

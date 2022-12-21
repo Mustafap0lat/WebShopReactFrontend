@@ -54,7 +54,7 @@ const NavHeader = () => {
             <LinkContainer to="/productlist">
               <Nav.Link className="text-white">Products</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/aboutus">
+            <LinkContainer to="/about">
               <Nav.Link className="text-white">About us</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
