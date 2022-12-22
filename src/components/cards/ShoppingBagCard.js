@@ -52,7 +52,7 @@ const ShoppingBagCard = ({
           <Card.Title className="fs-5">{productName}{productID}</Card.Title>
           <Button onClick={handleDecrement}>detta är minus</Button>
           <Card.Text className="fs-6 fw-bold">QTY: {quantity} </Card.Text>    
-          <Button onClick={handleIncrement}>+</Button>
+          <Button onClick={handleIncrement}>detta är plus</Button>
         </Stack>
         <Card.Text className="fs-6">#STYLE GREENWIZARD</Card.Text>
         <Stack direction="horizontal" className="justify-content-between mb-4">
