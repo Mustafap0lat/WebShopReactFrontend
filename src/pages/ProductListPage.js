@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ProductListPage.css";
 import ProductListCard from "../components/cards/ProductListCard";
-import { Container, Row, Col, Form, Dropdown } from "react-bootstrap";
+import { Container, Row, Col, Form, Dropdown, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import productlistpicture from "../assets/images/productlistpicture.png"
 
@@ -37,7 +37,7 @@ const ProductListPage = () => {
     <div
       style={{ justifyContent: "center", alignItems: "center", margin: "auto" }}
     >
-      <img
+      <Image
         src={productlistpicture}
         style={{ width: "100%", height: "60vh" }}
         alt=""
@@ -47,7 +47,7 @@ const ProductListPage = () => {
     <Container fluid>
     <Form.Label className="mt-4 ms-5 fs-6 fw-bold">Sort by:</Form.Label>
       <Dropdown className="ms-5" onSelect={(eventKey) => handleSortChange(eventKey)}>
-        <Dropdown.Toggle variant="secondary" id="sort-dropdown">
+        <Dropdown.Toggle className="bg-black border none" variant="secondary" id="sort-dropdown">
           {sortBy === 'alphabetical'
             ? 'Alphabetical'
             : sortBy === 'low'
