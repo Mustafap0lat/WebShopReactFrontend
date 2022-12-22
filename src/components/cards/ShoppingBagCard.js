@@ -19,31 +19,38 @@ const ShoppingBagCard = ({
   const { items, setItems } = useContext(CartContext);
   
   const handleIncrement = () => {
-     items.map((item) => {
-      if (item.product.productID === productID) {
+    setItems(
+      items.map((item) => {
+        if (item.product.productID === productID) {
         console.log("item productID", item.product.productID)
         console.log("productId", productID)
         console.log("Qty", item.qty)
-        item.qty++;
-        item.totalPrice += item.price;
-      }
-      return item;
-  
-    });
-
+          return {
+            ...item,
+            qty: item.qty + 1,
+          }
+        }
+        return item;
+      })
+    );
   };
-
 
   const handleDecrement = () => {
-    const updatedItems = items.map((item) => {
-      if (item.productID === productID && item.quantity > 0) {
-        return { ...item, quantity: item.quantity - 1 };
-      }
-      return item;
-    });
-
-    setItems(updatedItems); 
-  };
+    setItems(
+      items.map((item) => {
+        if (item.product.productID === productID) {
+        console.log("item productID", item.product.productID)
+        console.log("productId", productID)
+        console.log("Qty", item.qty)
+          return {
+            ...item,
+            qty: item.qty - 1,
+          };
+        }
+        return item;
+      })
+    );
+  }; 
 
   return (
     <Row className="mb-5">
