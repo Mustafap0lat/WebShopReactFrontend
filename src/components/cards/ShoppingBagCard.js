@@ -22,6 +22,7 @@ const ShoppingBagCard = ({
       if (item.product.productID === productID) {
         return { ...item, quantity: item.quantity + 1 };
       }
+      console.log(item)
       return item;
     });
     console.log(updatedItems)
