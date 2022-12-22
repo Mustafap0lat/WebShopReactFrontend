@@ -13,6 +13,7 @@ const ShoppingBagCard = ({
   details = "",
   quantity = "",
   photo = "",
+
 }) => {
 
   const { items, setItems } = useContext(CartContext);
@@ -48,7 +49,7 @@ const ShoppingBagCard = ({
       <Col sm={9} md={8}>
         <Stack direction="horizontal" className="justify-content-between mb-4">
           <Card.Title className="fs-5">{productName}{productID}</Card.Title>
-          <Button onClick={handleDecrement}>-</Button>
+          <Button onClick={handleDecrement}>detta är minus</Button>
           <Card.Text className="fs-6 fw-bold">QTY: {quantity} </Card.Text>    
           <Button onClick={handleIncrement}>+</Button>
         </Stack>
