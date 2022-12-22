@@ -19,18 +19,21 @@ const ShoppingBagCard = ({
   const { items, setItems } = useContext(CartContext);
   
   const handleIncrement = () => {
-    const updatedItems = items.map((item) => {
+     items.map((item) => {
       if (item.product.productID === productID) {
-        return { ...item, quantity: item.quantity + 1 };
+        console.log("item productID", item.product.productID)
+        console.log("productId", productID)
+        console.log("Qty", item.qty)
+        item.qty++;
+        item.totalPrice += item.price;
       }
-      console.log(item)
       return item;
+  
     });
-    console.log(updatedItems)
-    setItems(updatedItems); 
+
   };
 
- 
+
   const handleDecrement = () => {
     const updatedItems = items.map((item) => {
       if (item.productID === productID && item.quantity > 0) {
@@ -52,7 +55,7 @@ const ShoppingBagCard = ({
           <Card.Title className="fs-5">{productName}{productID}</Card.Title>
           <Button onClick={handleDecrement}>-</Button>
           <Card.Text className="fs-6 fw-bold">QTY: {quantity} </Card.Text>    
-          <Button onClick={handleIncrement}>detta är plus</Button>
+          <Button onClick={handleIncrement}>+</Button>
         </Stack>
         <Card.Text className="fs-6">#STYLE GREENWIZARD</Card.Text>
         <Stack direction="horizontal" className="justify-content-between mb-4">
