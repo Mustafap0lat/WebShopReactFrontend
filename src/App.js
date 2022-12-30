@@ -12,6 +12,8 @@ import { CartProvider } from "./CartContext";
 import CheckOutPage from "./pages/CheckOutPage";
 import ContactPage from "./pages/ContactPage";
 import Aboutus from "./pages/Aboutus";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/checkout" element={<CheckOutPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/about" element={<Aboutus/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
       </Routes>
     </CartProvider>
   );

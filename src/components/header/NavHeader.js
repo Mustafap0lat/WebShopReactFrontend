@@ -40,7 +40,7 @@ const NavHeader = () => {
               {shoppingCartIcon}
             </Container>
           </Link>
-          <Link to="/user">
+          <Link to="/login">
             <Container className="ms-5 me-4 text-white fs-4">{userIcon}</Container>
           </Link>
         </Form>

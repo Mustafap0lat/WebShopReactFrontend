@@ -31,7 +31,7 @@ const ShoppingBagPage = () => {
           ))}
         </Col>
         <Col sm={4}>
-          <Container className="bg-white p-5">
+          <Container className="bg-white p-5 rounded">
             <Card.Title className="mb-5 fs-3 fw-bold">Order Summary</Card.Title>
             <Stack
               direction="horizontal"

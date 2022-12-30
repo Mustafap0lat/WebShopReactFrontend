@@ -46,7 +46,7 @@ const ProductListPage = () => {
   }
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Row className="d-flex justify-content-center mt-5">
         <Col xs={7}>
           <Carousel>
@@ -129,7 +129,7 @@ const ProductListPage = () => {
           ))}
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 
