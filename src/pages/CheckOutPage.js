@@ -12,6 +12,7 @@ const BASE_URL = "http://localhost:8080/api/stripe"
 const CheckOutPage = () => {
   const [clientSecret, setClientSecret] = useState("");
   const appearance = {theme: "stripe",};
+  
   const options = {clientSecret,appearance,};
   const { getTotalPrice } = useContext(CartContext);
 
